@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "apileagueoflegends.fullname" . }}
+  labels:
+    app: {{ template "apileagueoflegends.name" . }}
+    chart: {{ template "apileagueoflegends.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  {{- if .Values.ingress.enabled }}
+  type: ClusterIP
+  {{- else }}
+  type: LoadBalancer
+  {{- end }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.port }}
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ template "apileagueoflegends.name" . }}
+    release: {{ .Release.Name }}

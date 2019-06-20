@@ -1,0 +1,23 @@
+sapiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "applol.fullname" . }}
+  labels:
+    app: {{ template "applol.name" . }}
+    chart: {{ template "applol.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  {{- if .Values.ingress.enabled }}
+  type: ClusterIP
+  {{- else }}
+  type: LoadBalancer
+  {{- end }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.port }}
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ template "applol.name" . }}
+    release: {{ .Release.Name }}
