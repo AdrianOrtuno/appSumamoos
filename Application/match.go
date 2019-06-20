@@ -9,12 +9,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Domain/champion"
-	"github.com/Domain/lane"
-	"github.com/Domain/queue"
-	"github.com/Domain/region"
-	"github.com/Domain/season"
-	"github.com/Persistance/types"
+	"github.com/AdrianOrtuno/appSumamoos/Domain/champion"
+	"github.com/AdrianOrtuno/appSumamoos/Domain/lane"
+	"github.com/AdrianOrtuno/appSumamoos/Domain/queue"
+	"github.com/AdrianOrtuno/appSumamoos/Domain/region"
+	"github.com/AdrianOrtuno/appSumamoos/Domain/season"
+	"github.com/AdrianOrtuno/appSumamoos/Persistance/types"
 )
 
 type Match struct {

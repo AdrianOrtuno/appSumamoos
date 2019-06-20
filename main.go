@@ -16,11 +16,11 @@ import (
 
 	//"strconv"
 
-	"github.com/Application"
-	"github.com/Domain/region"
-	"github.com/Persistance/ratelimit"
+	"github.com/AdrianOrtuno/appSumamoos/Application"
+	"github.com/AdrianOrtuno/appSumamoos/Domain/region"
+	"github.com/AdrianOrtuno/appSumamoos/Persistance/ratelimit"
 
-	"github.com/Vendor/gorilla/mux"
+	"github.com/AdrianOrtuno/appSumamoos/Vendor/gorilla/mux"
 )
 
 const (

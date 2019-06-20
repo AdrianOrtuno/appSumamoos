@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/Domain/region"
+	"github.com/AdrianOrtuno/appSumamoos/Domain/region"
 )
 
 type Summoner struct {

@@ -14,9 +14,9 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/Domain/region"
-	"github.com/Persistance/external"
-	"github.com/Persistance/ratelimit"
+	"github.com/AdrianOrtuno/appSumamoos/Domain/region"
+	"github.com/AdrianOrtuno/appSumamoos/Persistance/external"
+	"github.com/AdrianOrtuno/appSumamoos/Persistance/ratelimit"
 )
 
 type client struct {
