@@ -1,12 +1,17 @@
+# Start from a Debian image with the latest version of Go installed
+# and a workspace (GOPATH) configured at /go.
 FROM golang
 
-COPY . /go/src/github.com/user/appesports-back
-WORKDIR /go/src/github.com/user/appesports-back
+# Copy the local package files to the container's workspace.
+ADD . /go/src/github.com/AdrianOrtuno/appSumamoos
 
-# added vendor services will need to be included here
-RUN go get ./Vendor/gorilla/mux
+# Build the outyet command inside the container.
+# (You may fetch or manage dependencies here,
+# either manually or with a tool like "godep".)
+RUN go install github.com/AdrianOrtuno/appSumamoos
 
-RUN go get ./
-RUN go build
-	
+# Run the outyet command by default when the container starts.
+ENTRYPOINT /go/bin/appSumamoos
+
+# Document that the service listens on port 8080.
 EXPOSE 8080

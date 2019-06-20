@@ -26,7 +26,7 @@ import (
 const (
 	league = "6b5c7950-5260-11e7-8125-c81f66dbb56c"
 	reg    = region.EUW1
-	apiKey = "RGAPI-34f7e6fc-3fcd-4139-bdab-fc678fc6e773"
+	apiKey = "RGAPI-52f7b117-23d6-4238-a3d1-81cfbad5f514"
 	/*AddresCosmosDB      = "dev-bigdataesports.documents.azure.com:10255"
 	DB                  = "leagueoflegends"
 	userName            = "dev-bigdataesports"
